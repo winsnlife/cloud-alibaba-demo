@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="cloud-alibaba-demo_main" target="1.8" />
+      <module name="cloud-alibaba-demo_test" target="1.8" />
+      <module name="gateway_main" target="1.8" />
+      <module name="gateway_test" target="1.8" />
+      <module name="nacos-config-client_main" target="1.8" />
+      <module name="nacos-config-client_test" target="1.8" />
+      <module name="user-center_main" target="1.8" />
+      <module name="user-center_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

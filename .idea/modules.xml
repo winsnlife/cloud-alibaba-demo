@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-alibaba-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-alibaba-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway.iml" group="gateway" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway/gateway_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway/gateway_main.iml" group="gateway" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway/gateway_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway/gateway_test.iml" group="gateway" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nacos-config-client.iml" filepath="$PROJECT_DIR$/.idea/modules/nacos-config-client.iml" group="nacos-config-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nacos-config-client/nacos-config-client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/nacos-config-client/nacos-config-client_main.iml" group="nacos-config-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nacos-config-client/nacos-config-client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/nacos-config-client/nacos-config-client_test.iml" group="nacos-config-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-center/user-center.iml" filepath="$PROJECT_DIR$/.idea/modules/user-center/user-center.iml" group="user-center" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-center/user-center_main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-center/user-center_main.iml" group="user-center" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-center/user-center_test.iml" filepath="$PROJECT_DIR$/.idea/modules/user-center/user-center_test.iml" group="user-center" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.iml" />
+    </modules>
+  </component>
+</project>

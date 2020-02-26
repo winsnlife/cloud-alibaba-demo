@@ -1,0 +1,5 @@
+rootProject.name = 'cloud-alibaba-demo'
+include 'nacos-config-client'
+include 'gateway'
+include 'user-center'
+

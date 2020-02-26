@@ -1,0 +1,160 @@
+buildscript {//不能包含在subprojects/allprojects中
+    ext {
+//            springBootVersion = "1.5.4.RELEASE"
+//            springBootVersion = "1.5.10.RELEASE"
+//            springBootVersion = "2.0.0.M7"
+//            springBootVersion = "2.0.0.RC2"
+//            springBootVersion = "2.0.2.RELEASE"
+//            springBootVersion = "2.0.4.RELEASE"
+        springBootVersion = "2.0.7.RELEASE"
+//            springBootVersion = "2.1.1.RELEASE"
+
+//        springCloudAlibabaVersion = "0.2.0.RELEASE"
+        springCloudAlibabaVersion = "2.0.1.RELEASE"
+//        springCloudAlibabaVersion = "2.1.1.RELEASE"
+//        springCloudAlibabaVersion = "2.2.0.RELEASE"
+//    springCloudVersion = "Finchley.RELEASE"
+    }
+    repositories {
+//            mavenLocal()
+        mavenCentral()
+//            maven { url "${nexusBaseUrl}/repository/maven-public/" }
+        maven { url "${nexusBaseUrl}/content/repositories/thirdparty/" }
+        //非正式版只有这些库有
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "https://repo.spring.io/libs-milestone" }
+        maven { url "http://mvnrepository.com/repos/springio-milestone" }
+        maven { url "http://repo.spring.io/plugins-release/" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("io.spring.gradle:dependency-management-plugin:1.0.9.RELEASE")
+        //classpath('se.transmode.gradle:gradle-docker:1.2')
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = 4.10
+}
+
+group 'com.wws.cloud'
+version '1.0-SNAPSHOT'
+
+subprojects {
+
+    apply plugin: "java"
+//        apply plugin: "war"
+    apply plugin: "eclipse"
+    apply plugin: "idea"
+    apply plugin: "io.spring.dependency-management"
+    apply plugin: "maven-publish"
+    apply plugin: "org.springframework.boot"
+    //apply plugin: 'docker'
+
+    group "com.wws.cloud"
+    version "1.0"
+
+    /*默认情况下，当启动引导jar或bootWar任务时，jar或war任务将被禁用。可以配置一个项目，通过启用jar或war任务，同时构建一个可执行的归档文件和一个正常的归档文件。*/
+    jar {
+        enabled = true
+    }
+
+    dependencyManagement {
+        imports {
+//            mavenBom "org.springframework.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
+            mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
+        }
+    }
+
+    configurations{
+
+//            all*.exclude module: "spring-boot-starter-logging"
+//            all*.exclude module: "logback-classic"
+//            all*.exclude module: "logback-core"
+//            all*.exclude module: "jcl-over-slf4j"
+//            all*.exclude module: "jul-to-slf4j"
+//            all*.exclude module: "log4j-over-slf4j"
+        all*.exclude group: "org.slf4j",module:"slf4j-log4j12"
+        compile.exclude module: "lettuce"
+//            all*.exclude group: "log4j",module:"log4j"
+    }
+
+    repositories {
+//            mavenLocal()
+        mavenCentral()
+//            http://172.16.8.188:8081/nexus/content/repositories/thirdparty/
+//            maven { url "${nexusBaseUrl}/repository/maven-public/" }
+        maven { url "${nexusBaseUrl}/content/repositories/thirdparty/" }
+        maven { url "http://mvnrepository.com/repos/sonatype-releases" }
+        //非正式版只有这些库有
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/libs-milestone/" }
+        maven { url "http://mvnrepository.com/repos/springio-milestone" }
+    }
+
+    compileJava.options.incremental = true
+    compileJava.options.encoding = "UTF-8"
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId project.group
+                artifactId project.name
+                version project.version
+                //若是war包，就写components.web,若是jar包，就写components.java
+                from components.java
+            }
+        }
+        repositories {
+            maven {
+//                    url = "${nexusBaseUrl}/repository/maven-releases/"
+                url = "${nexusBaseUrl}/content/repositories/thirdparty/"
+                //如果为快照版本发布到Maven Nexus私服的快照库
+                if (project.version.endsWith("-SNAPSHOT")) {
+//                        url = "${nexusBaseUrl}/repository/maven-snapshots/"
+                    url = "${nexusBaseUrl}/content/repositories/thirdparty/"
+                }
+
+                credentials {
+                    username "${nexusUsername}"
+                    password "${nexusPassword}"
+                }
+            }
+        }
+    }
+
+    idea {
+        module {
+            inheritOutputDirs = false
+            outputDir = file("$buildDir/classes/java/main/")
+            testOutputDir = file("$buildDir/classes/java/test/")
+        }
+    }
+
+    task copyJars(type:Copy){
+        from configurations.runtime
+        into "D:/JavaSolution/Jars/${rootProject.name}/${project.name}"
+    }
+
+    // 显示当前项目下所有用于 compile 的 jar.
+    task listJars << {
+        configurations.compile.each { File file -> println file.name }
+    }
+
+    task createDirs << {
+        sourceSets*.java.srcDirs*.each { it.mkdirs() }
+        sourceSets*.resources.srcDirs*.each { it.mkdirs()}
+    }
+
+    copyJars.group = "custom"
+    listJars.group = "custom"
+    createDirs.group = "custom"
+}
+
