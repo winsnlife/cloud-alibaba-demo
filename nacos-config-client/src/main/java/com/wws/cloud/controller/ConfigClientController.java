@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigClientController {
 
-    @Value("${config.info:空值}")
+    @Value("${info:空值}")
     private String configInfo;
 
-    @GetMapping("/configInfo")
+    @GetMapping("/info")
     public Object getConfigInfo() {
         return configInfo;
     }
