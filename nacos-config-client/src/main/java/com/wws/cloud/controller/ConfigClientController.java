@@ -16,10 +16,17 @@ public class ConfigClientController {
 
     @Value("${info:空值}")
     private String configInfo;
+    @Value("${test.info:空值}")
+    private String testInfo;
 
     @GetMapping("/info")
     public Object getConfigInfo() {
         return configInfo;
+    }
+
+    @GetMapping("/test/info")
+    public Object getTestConfigInfo() {
+        return testInfo;
     }
 
 
