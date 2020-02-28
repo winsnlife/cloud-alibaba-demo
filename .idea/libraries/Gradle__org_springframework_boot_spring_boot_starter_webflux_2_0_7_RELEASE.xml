@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: org.springframework.boot:spring-boot-starter-webflux:2.0.7.RELEASE">
-    <CLASSES>
-      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-webflux/2.0.7.RELEASE/d1a998a3fdf0ab2f910ba94fda5da3a103ad10c9/spring-boot-starter-webflux-2.0.7.RELEASE.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

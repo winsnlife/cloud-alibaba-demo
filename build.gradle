@@ -6,20 +6,22 @@ buildscript {//不能包含在subprojects/allprojects中
 //            springBootVersion = "2.0.0.RC2"
 //            springBootVersion = "2.0.2.RELEASE"
 //            springBootVersion = "2.0.4.RELEASE"
-        springBootVersion = "2.0.7.RELEASE"
+        springBootVersion = "2.0.9.RELEASE"
 //            springBootVersion = "2.1.1.RELEASE"
+
+        springCloudVersion = "Finchley.SR4"
 
 //        springCloudAlibabaVersion = "0.2.0.RELEASE"
         springCloudAlibabaVersion = "2.0.1.RELEASE"
 //        springCloudAlibabaVersion = "2.1.1.RELEASE"
 //        springCloudAlibabaVersion = "2.2.0.RELEASE"
 
-        springCloudVersion = "Finchley.RELEASE"
 
         gatewayVersion = "2.0.0.RELEASE"
     }
     repositories {
         mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
         mavenCentral()
         maven { url "https://repo.spring.io/plugins-release/" }
 //            maven { url "${nexusBaseUrl}/repository/maven-public/" }
@@ -87,6 +89,7 @@ subprojects {
 
     repositories {
         mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
         mavenCentral()
         maven { url "https://repo.spring.io/plugins-release/" }
 //            http://172.16.8.188:8081/nexus/content/repositories/thirdparty/
