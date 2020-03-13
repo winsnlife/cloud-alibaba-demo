@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.cloud:spring-cloud-alibaba-dubbo:0.9.0.RELEASE">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-alibaba-dubbo/0.9.0.RELEASE/cf82d451ac5205ed2c567b11f1ca847bb2a35990/spring-cloud-alibaba-dubbo-0.9.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-alibaba-dubbo/0.9.0.RELEASE/e2aeee932fe90c79d35367699b6b33e3ccc9092a/spring-cloud-alibaba-dubbo-0.9.0.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

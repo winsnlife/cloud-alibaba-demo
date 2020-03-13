@@ -1,0 +1,69 @@
+#spring:
+#  application:
+#    name: provider
+#  main:
+#    allow-bean-definition-overriding: true
+#  cloud:
+#    nacos:
+#      discovery:
+#        namespace: 40757811-907b-4e43-857d-c225636f9f14
+#        # Nacos地址
+#        server-addr: 10.10.37.178:8848
+#      config:
+#        namespace: 40757811-907b-4e43-857d-c225636f9f14
+##        group: wws
+#        # Nacos地址
+#        server-addr: 10.10.37.178:8848
+#        # 这里我们获取的yaml格式的配置
+#        file-extension: yaml
+
+dubbo:
+  scan:
+    # dubbo 服务扫描基准包
+    base-packages: com.wws.cloud.provider.service.impl
+  application:
+    qos-enable: false
+    qos-accept-foreign-ip: false
+    qos-port: 22222
+  protocol:
+    # dubbo 协议
+    name: dubbo
+    # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+    port: 20882
+  registry:
+    # 挂载到 Spring Cloud 注册中心
+    address: spring-cloud://localhost
+#    address: nacos://10.10.37.178:8848
+    check: true
+  consumer:
+    check: false
+    group: spring-cloud-alibaba-dubbo-client
+  provider:
+    group: spring-cloud-alibaba-dubbo-client
+#  cloud:
+#    subscribed-services: spring-cloud-alibaba-dubbo-client
+spring:
+  application:
+    # Dubbo 应用名称
+    name: spring-cloud-alibaba-dubbo-server
+  main:
+    # Spring Boot 2.1 需要设定
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      # Nacos 服务发现与注册配置
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+#        group: wws
+        # Nacos地址
+        server-addr: 10.10.37.178:8848
+        # 这里我们获取的yaml格式的配置
+        file-extension: yaml
+#        context-path:
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,12 @@
+dependencies {
+    compile project(":facade")
+    compile "org.springframework.boot:spring-boot-starter-web"
+
+//    compile "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config"
+//    compile "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery"
+//    compile "com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel"
+//    compile "com.alibaba.cloud:spring-cloud-alibaba-sentinel-gateway"
+//    compile 'com.alibaba.cloud.cloud:spring-cloud-starter-openfeign'
+//    compile 'com.alibaba.csp:sentinel-dubbo-adapter'
+//    compile "com.alibaba.cloud:spring-cloud-starter-dubbo"
+}

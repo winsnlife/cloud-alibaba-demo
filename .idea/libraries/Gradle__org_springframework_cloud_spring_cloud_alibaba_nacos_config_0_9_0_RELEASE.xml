@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.cloud:spring-cloud-alibaba-nacos-config:0.9.0.RELEASE">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-alibaba-nacos-config/0.9.0.RELEASE/dc64053e14b93a516ccc43dc4d6dfc8013b9d0f3/spring-cloud-alibaba-nacos-config-0.9.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-alibaba-nacos-config/0.9.0.RELEASE/ec3801ffd4d039859cd295c759a0fc376f6ebca2/spring-cloud-alibaba-nacos-config-0.9.0.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

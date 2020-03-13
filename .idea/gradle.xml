@@ -5,14 +5,16 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="D:/JavaSolution/gradle/gradle-4.10.3" />
-        <option name="gradleJvm" value="1.8" />
+        <option name="gradleHome" value="D:/JavaSolution/gradle/gradle-4.5" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/consumer" />
+            <option value="$PROJECT_DIR$/facade" />
             <option value="$PROJECT_DIR$/gateway" />
-            <option value="$PROJECT_DIR$/nacos-config-client" />
-            <option value="$PROJECT_DIR$/user-center" />
+            <option value="$PROJECT_DIR$/provider" />
+            <option value="$PROJECT_DIR$/zuul-proxy" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

@@ -2,14 +2,18 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="cloud-alibaba-demo_main" target="1.8" />
-      <module name="cloud-alibaba-demo_test" target="1.8" />
+      <module name="consumer_main" target="1.8" />
+      <module name="consumer_test" target="1.8" />
+      <module name="facade_main" target="1.8" />
+      <module name="facade_test" target="1.8" />
       <module name="gateway_main" target="1.8" />
       <module name="gateway_test" target="1.8" />
-      <module name="nacos-config-client_main" target="1.8" />
-      <module name="nacos-config-client_test" target="1.8" />
-      <module name="user-center_main" target="1.8" />
-      <module name="user-center_test" target="1.8" />
+      <module name="provider_main" target="1.8" />
+      <module name="provider_test" target="1.8" />
+      <module name="zuu_main" target="1.8" />
+      <module name="zuu_test" target="1.8" />
+      <module name="zuul-proxy_main" target="1.8" />
+      <module name="zuul-proxy_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

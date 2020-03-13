@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cloud-alibaba-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/cloud-alibaba-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway.iml" group="gateway" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cloud-alibaba-demo.iml" filepath="$PROJECT_DIR$/.idea/cloud-alibaba-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/consumer/consumer.iml" filepath="$PROJECT_DIR$/.idea/modules/consumer/consumer.iml" group="consumer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/consumer/consumer_main.iml" filepath="$PROJECT_DIR$/.idea/modules/consumer/consumer_main.iml" group="consumer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/consumer/consumer_test.iml" filepath="$PROJECT_DIR$/.idea/modules/consumer/consumer_test.iml" group="consumer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/facade.iml" filepath="$PROJECT_DIR$/.idea/modules/facade.iml" group="facade" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/facade/facade_main.iml" filepath="$PROJECT_DIR$/.idea/modules/facade/facade_main.iml" group="facade" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/facade/facade_test.iml" filepath="$PROJECT_DIR$/.idea/modules/facade/facade_test.iml" group="facade" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway/gateway.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway/gateway.iml" group="gateway" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway/gateway_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway/gateway_main.iml" group="gateway" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway/gateway_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway/gateway_test.iml" group="gateway" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nacos-config-client.iml" filepath="$PROJECT_DIR$/.idea/modules/nacos-config-client.iml" group="nacos-config-client" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nacos-config-client/nacos-config-client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/nacos-config-client/nacos-config-client_main.iml" group="nacos-config-client" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nacos-config-client/nacos-config-client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/nacos-config-client/nacos-config-client_test.iml" group="nacos-config-client" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-center/user-center.iml" filepath="$PROJECT_DIR$/.idea/modules/user-center/user-center.iml" group="user-center" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-center/user-center_main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-center/user-center_main.iml" group="user-center" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-center/user-center_test.iml" filepath="$PROJECT_DIR$/.idea/modules/user-center/user-center_test.iml" group="user-center" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/provider/provider.iml" filepath="$PROJECT_DIR$/.idea/modules/provider/provider.iml" group="provider" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/provider/provider_main.iml" filepath="$PROJECT_DIR$/.idea/modules/provider/provider_main.iml" group="provider" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/provider/provider_test.iml" filepath="$PROJECT_DIR$/.idea/modules/provider/provider_test.iml" group="provider" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy.iml" group="zuul-proxy" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy_main.iml" group="zuul-proxy" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy_test.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy_test.iml" group="zuul-proxy" />
     </modules>
   </component>
 </project>

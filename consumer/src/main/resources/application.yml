@@ -1,0 +1,40 @@
+
+server:
+  port: 8801
+#    servlet:
+#      context-path: /consumer
+spring:
+  profiles:
+    active: dev
+
+
+#dubbo:
+##  scan:
+##    base-packages: com.wws.cloud.consumer.service.impl
+#  application:
+#    qos-enable: false
+#    #无需再显示地配置 dubbo.application.name
+##    name: dubbo-consumer
+#  registry:
+##    id: dubbo-consumer-registry
+##    address: zookeeper://172.16.8.87:2181
+#    address: spring-cloud://localhost
+##    address: nacos://10.10.37.178:8848
+##    check: false
+#  protocol:
+#    name: dubbo
+#    port: -1
+#  consumer:
+#    check: false
+#  cloud:
+#    subscribed-services: provider
+#    group: newcloudcall #加个61避免跟公网另一条线的dubbo组重复
+#  provider:
+#    group: newcloudcall
+#    threadpool: dubbo-threadpool
+#    threads: 10
+#logging:
+#  file: logs/consumer.log
+#  level:
+#    root: info
+#    com.alibaba.nacos.client.naming: error

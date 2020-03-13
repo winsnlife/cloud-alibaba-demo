@@ -1,0 +1,40 @@
+server:
+  port: 8803
+#  servlet:
+#    context-path: /provider
+
+spring:
+  profiles:
+    active: dev
+
+#dubbo:
+#  scan:
+#    base-packages: com.wws.cloud.provider.service.impl
+#  application:
+#    qos-enable: false
+#  #无需再显示地配置 dubbo.application.name
+##    name: dubbo-provider
+#  registry:
+##    id: dubbo-provider-registry
+##    address: zookeeper://172.16.8.87:2181
+##    address: nacos://10.10.37.178:8848
+#    address: spring-cloud://localhost
+##    check: true
+#  protocol:
+#    name: dubbo
+#    #-1 表示自增端口，从 20880 开始
+#    port: -1
+#  cloud:
+#    subscribed-services: consumer
+#  consumer:
+#    check: false
+#    group: newcloudcall #加个61避免跟公网另一条线的dubbo组重复
+#  provider:
+#    group: newcloudcall
+#    threadpool: dubbo-threadpool
+#    threads: 10
+#logging:
+#  file: logs/provider.log
+#  level:
+#    root: info
+#    com.alibaba.nacos.client.naming: error

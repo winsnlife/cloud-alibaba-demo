@@ -1,0 +1,28 @@
+/*为了避免可执行的归档文件和正常的归档文件被写到同一个位置，应该将一个或另一个文件配置为使用一个不同的位置。一种方法是配置一个分类器:*/
+bootJar {
+
+    classifier = 'boot'
+
+    /*默认情况下，可执行存档的主类将通过在任务的类路径中的目录中查找一个公共静态void main(String)方法来自动配置。
+主类也可以使用任务的mainClassName属性进行显式配置:*/
+    manifest {
+        attributes 'Start-Class': 'com.wws.cloud.ConsumerApplication'
+    }
+
+}
+
+dependencies {
+    compile project(":facade")
+//    runtime fileTree("D:\\JavaSolution\\Jars\\hfCRM")
+
+    compile "org.springframework.boot:spring-boot-starter-web"
+
+//    compile "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config"
+//    compile "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery"
+//    compile 'com.alibaba.cloud:spring-cloud-starter-openfeign'
+//    compile "com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel"
+//    compile 'com.alibaba.csp:sentinel-dubbo-adapter'
+//    compile "com.alibaba.cloud:spring-cloud-alibaba-dubbo"
+
+}
+
