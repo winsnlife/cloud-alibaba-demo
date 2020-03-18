@@ -1,5 +1,5 @@
 server:
-  port: 8803
+  port: 8802
 #  servlet:
 #    context-path: /provider
 
@@ -38,3 +38,7 @@ spring:
 #  level:
 #    root: info
 #    com.alibaba.nacos.client.naming: error
+
+feign:
+  sentinel:
+    enabled: true

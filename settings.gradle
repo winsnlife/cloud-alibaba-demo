@@ -3,5 +3,6 @@ include 'consumer'
 include 'gateway'
 include 'provider'
 include 'facade'
-include 'zuul-proxy'
+include 'gateway-zuul2'
+include 'gateway-dubbo'
 

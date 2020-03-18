@@ -1,6 +1,6 @@
 package com.wws.cloud.consumer.client;
 
-import org.springframework.cloud.alibaba.dubbo.annotation.DubboTransported;
+import com.alibaba.cloud.dubbo.annotation.DubboTransported;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

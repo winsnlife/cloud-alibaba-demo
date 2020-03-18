@@ -1,28 +1,21 @@
 buildscript {//不能包含在subprojects/allprojects中
     ext {
-//            springBootVersion = "1.5.4.RELEASE"
-//            springBootVersion = "1.5.10.RELEASE"
-//            springBootVersion = "2.0.0.M7"
-//            springBootVersion = "2.0.0.RC2"
-//            springBootVersion = "2.0.2.RELEASE"
-//            springBootVersion = "2.0.4.RELEASE"
-//        springBootVersion = "2.0.9.RELEASE"
-            springBootVersion = "2.1.9.RELEASE"
-//            springBootVersion = "2.1.13.RELEASE"
-//            springBootVersion = "2.2.5.RELEASE"
 
-//        springCloudVersion = "Finchley.SR2"
-        springCloudVersion = "Greenwich.RELEASE"
-//        springCloudVersion = "Greenwich.SR3"
-//        springCloudVersion = "Hoxton.SR3"
+        springBootVersion = "2.0.9.RELEASE"
+        springCloudVersion = "Finchley.SR4"
+        springCloudAlibabaVersion = "2.0.1.RELEASE"
 
-//        springCloudAlibabaVersion = "0.2.2.RELEASE"
-        springCloudAlibabaVersion = "0.9.0.RELEASE"
-//        springCloudAlibabaVersion = "2.0.1.RELEASE"
+        //OK
+//        springBootVersion = "2.1.13.RELEASE"
+//        springCloudVersion = "Greenwich.SR5"
+//        springCloudAlibabaVersion = "0.9.0.RELEASE"
+
 //        springCloudAlibabaVersion = "2.1.0.RELEASE"
 //        springCloudAlibabaVersion = "2.1.1.RELEASE"
-//        springCloudAlibabaVersion = "2.2.0.RELEASE"
 
+//        springBootVersion = "2.2.5.RELEASE"
+//        springCloudVersion = "Hoxton.SR3"
+//        springCloudAlibabaVersion = "2.2.0.RELEASE"
 
         gatewayVersion = "2.0.0.RELEASE"
     }
@@ -75,11 +68,12 @@ subprojects {
 
     dependencyManagement {
         imports {
-            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 //            mavenBom "org.springframework.cloud:spring-cloud-gateway-dependencies:${gatewayVersion}"
-            mavenBom "org.springframework.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
 
-//            mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+
+//            mavenBom "org.springframework.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
+            mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
         }
     }
 
@@ -122,23 +116,31 @@ subprojects {
         testCompile "org.springframework.boot:spring-boot-starter-test"
         compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
 
-        compile "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-config"
-        compile "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery"
-        compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
-        compile "org.springframework.cloud:spring-cloud-starter-alibaba-sentinel"
-//        compile 'com.alibaba.csp:sentinel-dubbo-adapter'
-        compile "org.springframework.cloud:spring-cloud-alibaba-dubbo"
+        compile 'com.alibaba.csp:sentinel-apache-dubbo-adapter'
+//        compile group: 'com.alibaba.csp', name: 'sentinel-dubbo-adapter', version: '1.7.1'
+        compile 'com.alibaba.csp:sentinel-datasource-nacos'
 
-//        compile "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config"
-//        compile "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery"
-//        compile "com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel"
-//        compile "com.alibaba.cloud:spring-cloud-alibaba-sentinel-gateway"
-//        compile 'com.alibaba.csp:sentinel-dubbo-adapter'
-//        compile "com.alibaba.cloud:spring-cloud-starter-dubbo"
+        //孵化前
+//        compile "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-config"
+//        compile "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery"
+//        compile "org.springframework.cloud:spring-cloud-starter-alibaba-sentinel"
+        compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
+//        compile "org.springframework.cloud:spring-cloud-alibaba-dubbo"
+
+        //孵化后
+        compile "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config"
+        compile "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery"
+        compile "com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel"
+        compile "com.alibaba.cloud:spring-cloud-starter-dubbo"
+
         //2.7.1 qos-server bug
         compile group: 'org.apache.dubbo', name: 'dubbo-spring-boot-starter', version: '2.7.3'
         compile group: 'org.apache.dubbo', name: 'dubbo-spring-boot-actuator', version: '2.7.3'
         compile group: 'org.apache.dubbo', name: 'dubbo', version: '2.7.3'
+        compile group: 'org.apache.dubbo', name: 'dubbo-metadata-report-zookeeper', version: '2.7.3'
+//        compile group: 'org.apache.dubbo', name: 'dubbo-metadata-report-redis', version: '2.7.3'
+
+//        compile group: 'org.apache.curator', name: 'curator-framework', version: '4.0.1'
 
 //        compile group: 'org.apache.curator', name: 'curator-recipes', version: '4.0.1'
 //        compile group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.4.10'

@@ -9,4 +9,6 @@ dependencies {
 //    compile 'com.alibaba.cloud.cloud:spring-cloud-starter-openfeign'
 //    compile 'com.alibaba.csp:sentinel-dubbo-adapter'
 //    compile "com.alibaba.cloud:spring-cloud-starter-dubbo"
+    compile "com.alibaba.cloud:spring-cloud-alibaba-sentinel-gateway"
+    compile "org.springframework.cloud:spring-cloud-starter-netflix-zuul"
 }

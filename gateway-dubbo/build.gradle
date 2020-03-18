@@ -1,0 +1,4 @@
+dependencies {
+    compile project(":facade")
+    compile "org.springframework.boot:spring-boot-starter-web"
+}

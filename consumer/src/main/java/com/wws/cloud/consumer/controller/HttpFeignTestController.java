@@ -27,4 +27,9 @@ public class HttpFeignTestController {
     public String save(){
         return httpFeignRestService.save(2,3);
     }
+
+    @GetMapping("/sentinel/hello")
+    String hello(){
+        return httpFeignRestService.hello();
+    }
 }

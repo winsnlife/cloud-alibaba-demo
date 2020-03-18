@@ -1,0 +1,106 @@
+
+<?xmlversion = "1.0" encoding="UTF-8"?>
+<!--
+    scan：性设置为true时，配置文件如果发生改变，将会被重新加载，默认值为true
+    scanPeriod:设置监测配置文件是否有修改的时间间隔，如果没有给出时间单位，默认单位是毫秒。当scan为true时，此属性生效。默认的时间间隔为1分钟。
+    debug:当此属性设置为true时，将打印出logback内部日志信息，实时查看logback运行状态。默认值为false。 -->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+
+    <property name="PROJECT_NAME" value="gateway" />
+
+    <!-- 文件输出格式 -->
+    <property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
+    <property name="STDOUT_PATTERN" value="[%d{yyyyMMdd HH:mm:ss,SSS}][%thread][%highlight(%-5level)] %cyan([%logger{15}:%L]) - %highlight(%msg) %n" />
+    <!--日志文件路径 -->
+    <property name="LOG_FILE_PATH" value="logs" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${STDOUT_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.hfzy.ihk" level="debug" />
+    <logger name="org.springframework" level="info"/>
+    <logger name="org.softamis.cluster4spring" level="debug"/>
+
+    <!--<logger name="org.apache.zookeeper" level="info"/>-->
+    <!--<logger name="springfox.documentation" level="info"/>-->
+    <!--<logger name="org.springframework.security" level="info"/>-->
+    <!--<logger name="org.springframework.data.elasticsearch" level="debug"/>-->
+    <!--<logger name="org.apache.lucene" level="debug"/>-->
+    <!--<logger name="org.springframework.session" level="debug"/>-->
+    <!--<logger name="org.elasticsearch" level="info"/>-->
+    <!--<logger name="org.springframework.kafka" level="info"/>-->
+    <!--<logger name="org.apache.kafka.clients" level="debug"/>-->
+    <!--<logger name="org.mybatis" level="INFO"/>-->
+    <!--<logger name="com.alibaba.druid.pool.DruidDataSource" level="trace"/>-->
+    <!--<logger name="org.springframework.data.redis" level="INFO"/>-->
+    <!--<logger name="com.hfzy.ihk.customer.security.filter.MyUsernamePasswordAuthenticationFilter" level="off" />-->
+
+    <!-- 开发环境 -->
+    <springProfile name="local,dev">
+
+        <!-- 每天产生一个文件 -->
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOG_FILE_PATH}/${PROJECT_NAME}/stdout_%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>2</maxHistory>
+            </rollingPolicy>
+
+            <encoder>
+                <pattern>${PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+        <root level="INFO">
+            <appender-ref ref="STDOUT" />
+            <appender-ref ref="FILE" />
+        </root>
+    </springProfile>
+
+    <!-- 生产环境 -->
+    <springProfile name="pro">
+
+        <!-- 每天产生一个文件 -->
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOG_FILE_PATH}/${PROJECT_NAME}/pro/stdout_%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>5</maxHistory>
+            </rollingPolicy>
+
+            <encoder>
+                <pattern>${PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+
+        <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOG_FILE_PATH}/${PROJECT_NAME}/pro/stderr_%d{yyyy-MM-dd}.log</fileNamePattern>
+                <MaxHistory>10</MaxHistory>
+            </rollingPolicy>
+
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${PATTERN}</pattern>
+            </layout>
+
+            <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                <level>ERROR</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+
+        </appender>
+
+        <root level="INFO">
+            <appender-ref ref="STDOUT" />
+            <appender-ref ref="FILE" />
+            <appender-ref ref="ERROR_FILE" />
+        </root>
+    </springProfile>
+
+</configuration>

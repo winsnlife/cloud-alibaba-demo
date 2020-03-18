@@ -43,6 +43,8 @@ dubbo:
   protocol:
     name: dubbo
     port: 20881
+  metadata-report:
+    address: zookeeper://172.16.8.87:2181
 spring:
   application:
     # Dubbo 应用名称
@@ -51,6 +53,11 @@ spring:
     # Spring Boot 2.1 需要设定
     allow-bean-definition-overriding: true
   cloud:
+    sentinel:
+      eager: true
+      transport:
+        port: 8720
+        dashboard: localhost:8080
     nacos:
       # Nacos 服务发现与注册配置
       discovery:

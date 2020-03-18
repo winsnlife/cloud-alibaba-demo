@@ -6,11 +6,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        namespace: 40757811-907b-4e43-857d-c225636f9f14
         # Nacos地址
         server-addr: 10.10.37.178:8848
       config:
-        namespace: 40757811-907b-4e43-857d-c225636f9f14
 #        group: wws
         server-addr: 10.10.37.178:8848
         file-extension: yaml
@@ -31,7 +29,17 @@ spring:
 #                  predicates:
 #                  - Path=/user/**
 #                  filters:
-
+# Add your routes here.
+#                - id: product_route
+#                  uri: lb://product
+#                  predicates:
+#                    - Path=/product/**
+#                - id: httpbin_route
+#                  uri: https://httpbin.org
+#                  predicates:
+#                    - Path=/httpbin/**
+#                  filters:
+#                    - RewritePath=/httpbin/(?<segment>.*), /$\{segment}
 management:
   endpoints:
     web:

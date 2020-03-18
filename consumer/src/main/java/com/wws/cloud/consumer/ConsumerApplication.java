@@ -2,7 +2,6 @@ package com.wws.cloud.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.alibaba.dubbo.annotation.DubboTransported;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -22,7 +21,7 @@ public class ConsumerApplication {
 
     @Bean
     @LoadBalanced
-    @DubboTransported
+//    @DubboTransported
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }

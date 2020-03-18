@@ -12,6 +12,7 @@ class FeignHttpTestController {
     @RequestMapping(value = "/param", method = RequestMethod.GET)
     public String param(String param) {
         log.info("------------haha,from feign client");
+        int a = 1/0;
         return "feign param provider! param="+param;
     }
 
