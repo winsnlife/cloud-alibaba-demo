@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.csp:sentinel-cluster-client-default:1.7.0">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-cluster-client-default/1.7.0/49e89b333fb3f21833bbb3a3a3186426abb6a392/sentinel-cluster-client-default-1.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-cluster-client-default/1.7.0/9ed12809531b1636321a9252bbeda23dfd35b30b/sentinel-cluster-client-default-1.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

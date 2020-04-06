@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.csp:sentinel-datasource-nacos:1.7.0">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-datasource-nacos/1.7.0/ee53d10e959e988c9bb7365d551ee66919abb1dc/sentinel-datasource-nacos-1.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-datasource-nacos/1.7.0/e71bc273ed5aefcc06b074a0fe4132137df60059/sentinel-datasource-nacos-1.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.csp:sentinel-apache-dubbo-adapter:1.7.0">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-apache-dubbo-adapter/1.7.0/96e8c6f8a370e6cdd5e03626a67731820ba9e08c/sentinel-apache-dubbo-adapter-1.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-apache-dubbo-adapter/1.7.0/fa95d7682ede6045d2f5786189778ff08d55ac3e/sentinel-apache-dubbo-adapter-1.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

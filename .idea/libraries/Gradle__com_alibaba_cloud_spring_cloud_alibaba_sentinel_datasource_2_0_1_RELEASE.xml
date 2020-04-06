@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.cloud:spring-cloud-alibaba-sentinel-datasource:2.0.1.RELEASE">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.cloud/spring-cloud-alibaba-sentinel-datasource/2.0.1.RELEASE/bba8e440e77cc83a132fafe48deed71d6185e6e8/spring-cloud-alibaba-sentinel-datasource-2.0.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.cloud/spring-cloud-alibaba-sentinel-datasource/2.0.1.RELEASE/de3d257ec16c50d5221a2da7e35e1f26cba18c6/spring-cloud-alibaba-sentinel-datasource-2.0.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

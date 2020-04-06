@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.csp:sentinel-spring-cloud-gateway-adapter:1.7.0">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-spring-cloud-gateway-adapter/1.7.0/3d9edfdb636f17d2ddd0b14bfd1645d270c763d3/sentinel-spring-cloud-gateway-adapter-1.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-spring-cloud-gateway-adapter/1.7.0/af1c4cb4e522bbcc6a6ef463a01fda2d4c0b960c/sentinel-spring-cloud-gateway-adapter-1.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

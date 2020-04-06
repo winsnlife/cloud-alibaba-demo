@@ -6,8 +6,14 @@
       <module name="consumer_test" target="1.8" />
       <module name="facade_main" target="1.8" />
       <module name="facade_test" target="1.8" />
+      <module name="gateway-dubbo_main" target="1.8" />
+      <module name="gateway-dubbo_test" target="1.8" />
+      <module name="gateway-zuul2_main" target="1.8" />
+      <module name="gateway-zuul2_test" target="1.8" />
       <module name="gateway_main" target="1.8" />
       <module name="gateway_test" target="1.8" />
+      <module name="gzuul_main" target="1.8" />
+      <module name="gzuul_test" target="1.8" />
       <module name="provider_main" target="1.8" />
       <module name="provider_test" target="1.8" />
       <module name="zuu_main" target="1.8" />

@@ -85,6 +85,7 @@ subprojects {
 //            all*.exclude module: "jcl-over-slf4j"
 //            all*.exclude module: "jul-to-slf4j"
 //            all*.exclude module: "log4j-over-slf4j"
+        //log4j与logback包冲突
         all*.exclude group: "org.slf4j",module:"slf4j-log4j12"
         compile.exclude module: "lettuce"
 //            all*.exclude group: "log4j",module:"log4j"
@@ -113,7 +114,7 @@ subprojects {
 
     dependencies {
         compile "org.springframework.boot:spring-boot-starter-actuator"
-        testCompile "org.springframework.boot:spring-boot-starter-test"
+//        testCompile "org.springframework.boot:spring-boot-starter-test"
         compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
 
         compile 'com.alibaba.csp:sentinel-apache-dubbo-adapter'
@@ -134,21 +135,36 @@ subprojects {
         compile "com.alibaba.cloud:spring-cloud-starter-dubbo"
 
         //2.7.1 qos-server bug
-        compile group: 'org.apache.dubbo', name: 'dubbo-spring-boot-starter', version: '2.7.3'
-        compile group: 'org.apache.dubbo', name: 'dubbo-spring-boot-actuator', version: '2.7.3'
-        compile group: 'org.apache.dubbo', name: 'dubbo', version: '2.7.3'
+//        compile group: 'org.apache.dubbo', name: 'dubbo-spring-boot-starter', version: '2.7.3'
+//        compile group: 'org.apache.dubbo', name: 'dubbo-spring-boot-actuator', version: '2.7.3'
+//        compile group: 'org.apache.dubbo', name: 'dubbo', version: '2.7.3'
         compile group: 'org.apache.dubbo', name: 'dubbo-metadata-report-zookeeper', version: '2.7.3'
 //        compile group: 'org.apache.dubbo', name: 'dubbo-metadata-report-redis', version: '2.7.3'
 
 //        compile group: 'org.apache.curator', name: 'curator-framework', version: '4.0.1'
-
-//        compile group: 'org.apache.curator', name: 'curator-recipes', version: '4.0.1'
-//        compile group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.4.10'
+        //support 3.4.X version
+        compile group: 'org.apache.curator', name: 'curator-recipes', version: '4.0.1'
+        compile group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.4.10'
 //        compile('com.101tec:zkclient:0.8'){
 //            exclude group: 'org.apache.zookeeper', module: 'zookeeper'
 //        }
     }
 
+    bootRun {
+        jvmArgs{
+            [
+//                    "-Xmx1g",
+//                    "-Xms1g",
+//                    "-Xms256m",
+                    "-server",
+                    //dubbo使用logback输出日志
+                    "-Ddubbo.application.logger=slf4j"
+//
+            ].iterator()
+        }
+//        main = 'com.hfzy.ihk.web.calldata.Application'
+//        sourceResources sourceSets.main
+    }
     publishing {
         publications {
             maven(MavenPublication) {

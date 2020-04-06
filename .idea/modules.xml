@@ -10,14 +10,17 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/facade/facade_main.iml" filepath="$PROJECT_DIR$/.idea/modules/facade/facade_main.iml" group="facade" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/facade/facade_test.iml" filepath="$PROJECT_DIR$/.idea/modules/facade/facade_test.iml" group="facade" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway/gateway.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway/gateway.iml" group="gateway" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-dubbo.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-dubbo.iml" group="gateway-dubbo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-dubbo/gateway-dubbo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-dubbo/gateway-dubbo_main.iml" group="gateway-dubbo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-dubbo/gateway-dubbo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-dubbo/gateway-dubbo_test.iml" group="gateway-dubbo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-zuul2/gateway-zuul2.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-zuul2/gateway-zuul2.iml" group="gateway-zuul2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-zuul2/gateway-zuul2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-zuul2/gateway-zuul2_main.iml" group="gateway-zuul2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway-zuul2/gateway-zuul2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway-zuul2/gateway-zuul2_test.iml" group="gateway-zuul2" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway/gateway_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway/gateway_main.iml" group="gateway" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway/gateway_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway/gateway_test.iml" group="gateway" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/provider/provider.iml" filepath="$PROJECT_DIR$/.idea/modules/provider/provider.iml" group="provider" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/provider/provider_main.iml" filepath="$PROJECT_DIR$/.idea/modules/provider/provider_main.iml" group="provider" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/provider/provider_test.iml" filepath="$PROJECT_DIR$/.idea/modules/provider/provider_test.iml" group="provider" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy.iml" group="zuul-proxy" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy_main.iml" group="zuul-proxy" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy_test.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul-proxy/zuul-proxy_test.iml" group="zuul-proxy" />
     </modules>
   </component>
 </project>

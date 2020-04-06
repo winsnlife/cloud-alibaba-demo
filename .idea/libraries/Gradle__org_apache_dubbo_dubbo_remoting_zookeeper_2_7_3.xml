@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.dubbo:dubbo-remoting-zookeeper:2.7.3">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/org.apache.dubbo/dubbo-remoting-zookeeper/2.7.3/eaca1ae2a42c2d33305dbe722914e8345ff36e1a/dubbo-remoting-zookeeper-2.7.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/org.apache.dubbo/dubbo-remoting-zookeeper/2.7.3/d75265a5416c982d6d6f404a33d21fda0d188bb1/dubbo-remoting-zookeeper-2.7.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

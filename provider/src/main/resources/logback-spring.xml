@@ -22,7 +22,7 @@
 
     <logger name="com.hfzy.ihk" level="debug" />
     <logger name="org.springframework" level="info"/>
-    <logger name="org.softamis.cluster4spring" level="debug"/>
+    <logger name=" org.apache.curator" level="debug"/>
 
     <!--<logger name="org.apache.zookeeper" level="info"/>-->
     <!--<logger name="springfox.documentation" level="info"/>-->

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.csp:sentinel-zuul-adapter:1.7.0">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-zuul-adapter/1.7.0/d5af022a4e183a8f5172135282a3db8ce6e12a8b/sentinel-zuul-adapter-1.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-zuul-adapter/1.7.0/3550636b84d1278491ea0845063876e4640c5274/sentinel-zuul-adapter-1.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

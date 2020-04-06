@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: de.ruedigermoeller:fst:2.48-jdk-6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/ruedigermoeller/fst/2.48-jdk-6/fst-2.48-jdk-6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

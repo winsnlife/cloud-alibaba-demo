@@ -33,18 +33,23 @@ dubbo:
     subscribed-services: spring-cloud-alibaba-dubbo-server
   consumer:
     check: false
-    group: spring-cloud-alibaba-dubbo-client
-  provider:
-    group: spring-cloud-alibaba-dubbo-client
+#    group: spring-cloud-alibaba-dubbo-client
+#  provider:
+#    group: spring-cloud-alibaba-dubbo-client
   application:
     qos-port: 33333
     qos-accept-foreign-ip: false
     qos-enable: false
-  protocol:
-    name: dubbo
-    port: 20881
-  metadata-report:
-    address: zookeeper://172.16.8.87:2181
+#  protocol:
+#    name: dubbo
+#    port: 20881
+#  metadata-report:
+#    address: zookeeper://172.16.8.87:2181
+#  config-center:
+#    address: zookeeper://172.16.8.87:2181
+    #???
+#  monitor:
+#    address: 172.16.8.87:8080
 spring:
   application:
     # Dubbo 应用名称
@@ -62,14 +67,16 @@ spring:
       # Nacos 服务发现与注册配置
       discovery:
         server-addr: 127.0.0.1:8848
+        metadata: {author: wws,date: 2020-03-18}
       config:
   #        group: wws
         # Nacos地址
         server-addr: 10.10.37.178:8848
         # 这里我们获取的yaml格式的配置
         file-extension: yaml
+        shared-dataids: common.properties
+        refreshable-dataids: common.properties
   #        group: wws
-
 management:
   endpoints:
     web:

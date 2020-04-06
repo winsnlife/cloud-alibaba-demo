@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.csp:sentinel-reactor-adapter:1.7.0">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-reactor-adapter/1.7.0/5cfa11f65fa123c8eb945c70893da3f0cd86a00d/sentinel-reactor-adapter-1.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-reactor-adapter/1.7.0/c8604c6ba4859dc80109adcdc049de9bb5a3a69d/sentinel-reactor-adapter-1.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

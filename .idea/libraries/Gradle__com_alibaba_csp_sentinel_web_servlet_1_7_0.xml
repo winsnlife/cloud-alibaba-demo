@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alibaba.csp:sentinel-web-servlet:1.7.0">
+    <CLASSES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-web-servlet/1.7.0/41a9190ae9dec82425d30e537b1e416521e1193d/sentinel-web-servlet-1.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/JavaSolution/gradle/gradle_jar_home/caches/modules-2/files-2.1/com.alibaba.csp/sentinel-web-servlet/1.7.0/10190e4887d92e08e3d328b3459aede948ce3dad/sentinel-web-servlet-1.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
